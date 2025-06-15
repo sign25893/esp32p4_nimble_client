@@ -79,10 +79,8 @@ idf.py -p /dev/ttyUSB0 flash monitor
 
 ## 🛠 Используемые технологии
 
-- **ESP32**
-- **FreeRTOS**
+- **ESP32P4**
 - **NimBLE (BLE stack)**
-- **C++17**
 - **ESP-IDF**
 
 ## 📜 Лицензия

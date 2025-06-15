@@ -28,15 +28,15 @@
 
 ```
 project-root/
-│
 ├── main/
-│   ├── main.cpp          — основной файл приложения (BLE задача)
-│   ├── ble.cpp           — реализация BLE логики (скан, подключение, уведомления, отправка)
-│   └── ble.h             — заголовок (если используется)
-│
+│   └── src/
+│       ├── ble.cpp
+│       ├── main.cpp
+│       ├── CMakeLists.txt
+│       └── idf_component.yml
 ├── CMakeLists.txt
-├── README.md             — описание проекта
-└── sdkconfig             — настройки проекта
+├── README.md
+├── sdkconfig
 ```
 
 ## 🚀 Быстрый старт

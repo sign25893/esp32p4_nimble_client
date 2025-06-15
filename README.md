@@ -32,8 +32,8 @@ project-root/
 │   └── src/
 │       ├── ble.cpp
 │       ├── main.cpp
-│       ├── CMakeLists.txt
-│       └── idf_component.yml
+│    ├── CMakeLists.txt
+│    └── idf_component.yml
 ├── CMakeLists.txt
 ├── README.md
 ├── sdkconfig
@@ -43,11 +43,11 @@ project-root/
 
 ```bash
 # Клонируем и переходим в проект
-git clone <your-repo-url>
-cd your-project
+git clone https://github.com/sign25893/esp32p4_nimble_client.git
+cd <your-project>
 
-# Инициализация ESP-IDF (если ещё не настроено)
-. $HOME/esp/esp-idf/export.sh
+# Выбор цели
+idf.py set-target esp32p4
 
 # Сборка проекта
 idf.py build

@@ -1,0 +1,89 @@
+dependencies:
+  espressif/eppp_link:
+    component_hash: c2fd9c57ac14a68a62c9d9cdeec39a2b265abc16779196ce2c9f5000c9a4dd8b
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.2'
+    - name: espressif/esp_serial_slave_link
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^1.1.0
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 0.2.0
+  espressif/esp_hosted:
+    component_hash: e450006a54aba8d365fa83ecf451b4f027a6fc8cfe13484400d7e198ec5b4d7e
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.3'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 1.3.3
+  espressif/esp_serial_slave_link:
+    component_hash: 8c534b7d4986ca0e4c41db71f559492b795ab862f1d15359d7993034696b7bcc
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 1.1.0
+  espressif/esp_wifi_remote:
+    component_hash: 0053859f729e079e67339223221b7772d06a75be0161d244116aae0dfa4460c0
+    dependencies:
+    - name: espressif/eppp_link
+      registry_url: https://components.espressif.com
+      require: private
+      version: '>=0.1'
+    - name: espressif/esp_hosted
+      registry_url: https://components.espressif.com
+      require: private
+      rules:
+      - if: target in [esp32h2, esp32p4]
+      version: '>=0.0.6'
+    - name: idf
+      require: private
+      version: '>=5.3'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 0.5.3
+  h2zero/esp-nimble-cpp:
+    component_hash: 82f654989d6e7a82744e32af78fd796d02c545a1728f35d165f4dacd4fcc3663
+    dependencies:
+    - name: espressif/esp_hosted
+      registry_url: https://components.espressif.com
+      require: private
+      rules:
+      - if: target in [esp32p4]
+      version: '*'
+    - name: espressif/esp_wifi_remote
+      registry_url: https://components.espressif.com
+      require: private
+      rules:
+      - if: target in [esp32p4]
+      version: <0.5.4
+    - name: idf
+      require: private
+      rules:
+      - if: target in [esp32p4]
+      version: '>=5.3.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 2.2.1
+  idf:
+    source:
+      type: idf
+    version: 5.4.0
+direct_dependencies:
+- h2zero/esp-nimble-cpp
+- idf
+manifest_hash: f2066d327f2c6b3c964a3d9693f8ace805260be824b6652c72eaa29a79cddc27
+target: esp32p4
+version: 2.0.0
